@@ -1,0 +1,115 @@
+<!-- 
+  Desain: Referensi dari video tiktok
+  Code: Yusuf (Yssufszz)
+  GitHub: https://github.com/Yssufszz
+  Project: Login dan Register Slider Modern | Temanya: Futuristik + ada Dark/Light Mode juga
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register Slider</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch" class="switch">
+      <img src="assets/icon/sun.png" alt="Sun" class="icon sun" />
+      <img src="assets/icon/moon.png" alt="Moon" class="icon moon" />
+    </label>
+  </div>
+  
+  <div class="container" id="container">
+    
+    <div class="form-container sign-up-container">
+      <form id="register-form">
+        <h1>Daftar</h1>
+
+        <div class="input-group">
+          <input type="text" id="register-name" name="name" required placeholder=" " />
+          <label for="register-name">Name</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="register-email" name="email" required placeholder=" " />
+          <label for="register-email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="register-password" name="password" required placeholder=" " />
+          <label for="register-password">Password</label>
+          <span class="toggle-password" onclick="togglePassword('register-password', this)">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+
+        <button type="submit">Daftar</button>
+        <span>atau mau pake akun lu?</span>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-container sign-in-container">
+      <form id="login-form">
+        <h1>Login</h1>
+
+        <div class="input-group">
+          <input type="email" id="login-email" name="email" required placeholder=" " />
+          <label for="login-email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="login-password" name="password" required placeholder=" " />
+          <label for="login-password">Password</label>
+          <span class="toggle-password" onclick="togglePassword('login-password', this)">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+
+        <div class="options">
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+        <span>atau mau pake akun lu?</span>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Selamat Datang Kembali</h1>
+          <p>Sudah punya akun? Sini langsung login aja.</p>
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Mulai disini</h1>
+          <p>Belum punya akun? Sini Daftar dulu aja.</p>
+          <button class="ghost" id="signUp">Daftar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
